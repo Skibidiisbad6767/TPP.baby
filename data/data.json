@@ -1,0 +1,612 @@
+{
+  "project": {
+    "name": "The Proxy Project",
+    "shortName": "TPP",
+    "domain": "tpp.baby",
+    "tagline": "Next-Generation Stealth Proxy Network & Academic Bypass Hub",
+    "description": "High-performance unblocked proxy mirrors, educational cloaks, and filter evasion directory designed for ethical privacy, research, and open web access.",
+    "version": "2.4.0",
+    "lastUpdated": "October 2026",
+    "serverStats": {
+      "onlineNodes": 24,
+      "uptime": "99.85%",
+      "activeFiltersBypassed": [
+        "GoGuardian",
+        "iBoss",
+        "Lightspeed",
+        "FortiGuard",
+        "Securly"
+      ],
+      "discordBoostLevel": "Level 2 (Active Promo)",
+      "totalMirrors": 24
+    },
+    "social": {
+      "discord": "https://discord.gg/tpp",
+      "github": "https://github.com/the-proxy-project"
+    }
+  },
+  "services": [
+    {
+      "id": "truffled",
+      "name": "Truffled",
+      "category": "Web Proxy",
+      "badge": "Popular",
+      "badgeColor": "cyan",
+      "description": "Ultra-fast node unblocker with modern interface, customizable disguise tabs, and rapid SSL cipher switching.",
+      "primaryUrl": "https://truffled.cv/",
+      "testedFilters": [
+        {
+          "name": "GoGuardian",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "iBoss",
+          "status": "warning",
+          "label": "Partial (Use Mirrors)"
+        },
+        {
+          "name": "Lightspeed",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "FortiGuard",
+          "status": "working",
+          "label": "Bypassed"
+        }
+      ],
+      "features": [
+        "Dynamic URL encoding & tab cloaking",
+        "Sub-150ms routing across distributed nodes",
+        "Full support for YouTube, Discord web & game portals",
+        "Automatic fallback server rotation"
+      ],
+      "mirrors": [
+        {
+          "url": "https://truffled.cv/",
+          "type": "Primary Domain",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed"
+          ]
+        },
+        {
+          "url": "https://snoopylovestruffle.getinspiredflight.com/",
+          "type": "Stealth Subdomain",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss",
+            "FortiGuard"
+          ]
+        },
+        {
+          "url": "https://drpepper.kwgranitecountertops.com/",
+          "type": "Commercial Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss",
+            "Lightspeed"
+          ]
+        },
+        {
+          "url": "https://wandlyninns.com/",
+          "type": "Hospitality Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "https://stalbansepiscopal.com/",
+          "type": "Civic Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss",
+            "FortiGuard"
+          ]
+        },
+        {
+          "url": "https://best95trend.com/",
+          "type": "Lifestyle Mirror",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed"
+          ]
+        },
+        {
+          "url": "https://health.wvpreschool.org/",
+          "type": "Educational Mirror",
+          "status": "degraded",
+          "note": "Reported blocked on iBoss; working on GoGuardian",
+          "testedFilters": [
+            "GoGuardian"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "figure",
+      "name": "Figure Cloud",
+      "category": "Cloud Edge",
+      "badge": "Edge Speed",
+      "badgeColor": "purple",
+      "description": "Serverless edge worker proxy running on global Cloudflare Workers infrastructure for zero-fingerprint lightweight browsing.",
+      "primaryUrl": "https://figure-cloud.figure-softwares.workers.dev/",
+      "testedFilters": [
+        {
+          "name": "GoGuardian",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "iBoss",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "Lightspeed",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "FortiGuard",
+          "status": "working",
+          "label": "Bypassed"
+        }
+      ],
+      "features": [
+        "Distributed Cloudflare global edge network",
+        "Zero server downtime or single-point failure",
+        "Built-in cookie and header sanitization",
+        "Streamlined minimalist proxy viewport"
+      ],
+      "mirrors": [
+        {
+          "url": "https://figure-cloud.figure-softwares.workers.dev/",
+          "type": "Workers Edge",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss",
+            "Lightspeed",
+            "FortiGuard"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nth",
+      "name": "Noah's Tutoring Hub (NTH)",
+      "category": "Educational Camouflage",
+      "badge": "Stealth Master",
+      "badgeColor": "emerald",
+      "description": "Deep disguise academic network featuring realistic curriculum subdomains, lecture paths, and BunnyCDN acceleration.",
+      "primaryUrl": "https://education.kchcs.org/",
+      "testedFilters": [
+        {
+          "name": "GoGuardian",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "iBoss",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "Lightspeed",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "FortiGuard",
+          "status": "working",
+          "label": "Bypassed"
+        }
+      ],
+      "features": [
+        "Academic URL path obfuscation (physics, math, homework)",
+        "BunnyCDN worldwide edge points of presence",
+        "Auto-cloaked title & tab icon on load",
+        "Immune to standard keyword-based content inspection"
+      ],
+      "mirrors": [
+        {
+          "url": "https://education.kchcs.org/",
+          "type": "Main Academic Hub",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss",
+            "Lightspeed"
+          ]
+        },
+        {
+          "url": "https://sloths-back.b-cdn.net/",
+          "type": "BunnyCDN Edge Node",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed"
+          ]
+        },
+        {
+          "url": "http://seminar.lecture.english.assignment.studying.mcneillderm.com/",
+          "type": "Seminar Lecture Node",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://math.lecture.geometry.music.literature.9dejulio.gob.ar/",
+          "type": "Geometry / Gov Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://calculus.english.teacher.art.homework.9dejulio.gob.ar/",
+          "type": "Calculus Teacher Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://studying.math.physics.lecture.campus.mcneillderm.com/",
+          "type": "Physics Lecture Campus",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://physics.homework.classroom.vocabulary.library.mcneillderm.com/",
+          "type": "Library Classroom Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://classroom.reading.homework.music.technology.mcneillderm.com/",
+          "type": "Tech Classroom Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://lecture.homework.literature.chemistry.reading.mcneillderm.com/",
+          "type": "Chemistry Reading Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        },
+        {
+          "url": "http://math.algebra.literature.vocabulary.homework.mcneillderm.com/",
+          "type": "Algebra Homework Decoy",
+          "status": "online",
+          "testedFilters": [
+            "GoGuardian",
+            "Lightspeed",
+            "iBoss"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "froggies",
+      "name": "Froggies Arcade & Media",
+      "category": "Arcade & Media",
+      "badge": "IXL Cloaked",
+      "badgeColor": "amber",
+      "description": "Full-featured web arcade and streaming library perfectly disguised behind authentic IXL Learning metadata and school district masks.",
+      "primaryUrl": "https://nick.allys.love/",
+      "testedFilters": [
+        {
+          "name": "GoGuardian",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "iBoss",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "FortiGuard",
+          "status": "working",
+          "label": "Bypassed"
+        },
+        {
+          "name": "Lightspeed",
+          "status": "working",
+          "label": "Bypassed"
+        }
+      ],
+      "camouflage": {
+        "title": "IXL | Math, Language Arts, Science, Social Studies, and Spanish",
+        "description": "IXL is the world's most popular subscription-based learning site for K–12. Used by over 17 million students, IXL provides personalized learning.",
+        "icon": "https://www.ixl.com/favicon.ico"
+      },
+      "features": [
+        "Unblocked movies, TV shows, and web-based games",
+        "Full IXL Learning camouflage wrapper",
+        "Verified operational on strict FortiGuard & iBoss firewalls",
+        "Seamless full-screen mode & anti-close protection"
+      ],
+      "mirrors": [
+        {
+          "url": "https://nick.allys.love/",
+          "type": "IXL Camouflage Node #1",
+          "status": "online",
+          "testedFilters": [
+            "iBoss",
+            "FortiGuard",
+            "GoGuardian"
+          ]
+        },
+        {
+          "url": "https://ally.nickys.love/",
+          "type": "IXL Camouflage Node #2",
+          "status": "online",
+          "testedFilters": [
+            "iBoss",
+            "FortiGuard",
+            "GoGuardian"
+          ]
+        },
+        {
+          "url": "https://hally.nickys.love/",
+          "type": "IXL Camouflage Node #3",
+          "status": "online",
+          "testedFilters": [
+            "FortiGuard",
+            "GoGuardian"
+          ]
+        },
+        {
+          "url": "https://parkviewpylusd.org/",
+          "type": "District Domain Decoy #1",
+          "status": "online",
+          "testedFilters": [
+            "iBoss",
+            "GoGuardian"
+          ]
+        },
+        {
+          "url": "https://denisonisd.org/",
+          "type": "District Domain Decoy #2",
+          "status": "online",
+          "testedFilters": [
+            "iBoss",
+            "FortiGuard"
+          ]
+        },
+        {
+          "url": "https://gloverschool.org/",
+          "type": "School Domain Decoy #3",
+          "status": "online",
+          "testedFilters": [
+            "iBoss",
+            "GoGuardian",
+            "Lightspeed"
+          ]
+        }
+      ]
+    }
+  ],
+  "cloakPresets": [
+    {
+      "id": "classroom",
+      "name": "Google Classroom",
+      "title": "Classes",
+      "icon": "https://ssl.gstatic.com/classroom/favicon.png",
+      "badge": "Popular"
+    },
+    {
+      "id": "drive",
+      "name": "Google Drive",
+      "title": "My Drive - Google Drive",
+      "icon": "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png",
+      "badge": "Standard"
+    },
+    {
+      "id": "docs",
+      "name": "Google Docs",
+      "title": "Google Docs",
+      "icon": "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico",
+      "badge": "Standard"
+    },
+    {
+      "id": "ixl",
+      "name": "IXL Learning",
+      "title": "IXL | Math, Language Arts, Science, Social Studies, and Spanish",
+      "icon": "https://www.ixl.com/favicon.ico",
+      "badge": "Educational"
+    },
+    {
+      "id": "canvas",
+      "name": "Canvas LMS",
+      "title": "Dashboard",
+      "icon": "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico",
+      "badge": "Academic"
+    },
+    {
+      "id": "desmos",
+      "name": "Desmos Graphing",
+      "title": "Desmos | Graphing Calculator",
+      "icon": "https://www.desmos.com/favicon.ico",
+      "badge": "Math"
+    },
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "title": "Wikipedia, the free encyclopedia",
+      "icon": "https://en.wikipedia.org/static/favicon/wikipedia.ico",
+      "badge": "Research"
+    }
+  ],
+  "rules": [
+    {
+      "title": "Legal & Ethical Use",
+      "icon": "⚖️",
+      "summary": "Proxies must be used strictly for ethical purposes such as educational research, privacy defense, and network testing. Unauthorized hacking, fraud, or illegal activities are strictly forbidden."
+    },
+    {
+      "title": "Privacy & Data Protection",
+      "icon": "🔒",
+      "summary": "Never share personal identification, login credentials, or proxy auth tokens. Always employ robust, unique passwords across services."
+    },
+    {
+      "title": "Community Respect",
+      "icon": "🤝",
+      "summary": "Zero tolerance for harassment, hate speech, spamming, or dissemination of malicious payloads, phishing scripts, or exploits."
+    },
+    {
+      "title": "Node Fair Use & Proxy Limits",
+      "icon": "⚡",
+      "summary": "Respect mirror rate limits. Promptly submit dead or blocked nodes via report tickets, and refrain from attempting unauthorized server modifications."
+    },
+    {
+      "title": "Legal Compliance",
+      "icon": "📜",
+      "summary": "Adhere to all applicable local and regional regulations. The server administrators and maintainers assume no liability for individual misuse."
+    },
+    {
+      "title": "Healthy Community Engagement",
+      "icon": "💬",
+      "summary": "Be constructive, assist peers, avoid fraudulent schemes, and uphold a collaborative knowledge-sharing atmosphere."
+    },
+    {
+      "title": "Technical Integrity",
+      "icon": "🛡️",
+      "summary": "No botting abuse, automated scraping, excessive bandwidth exhaustion, or attempted unauthorized perimeter intrusion."
+    },
+    {
+      "title": "Incident Reporting",
+      "icon": "🚨",
+      "summary": "Report rule violations and bad actors directly to administrators via tickets. Anonymous reporting is fully supported and protected."
+    },
+    {
+      "title": "Strict Enforcement",
+      "icon": "🔨",
+      "summary": "Initial violations incur an official warning; repeat or severe infractions result in immediate permanent expulsion. Staff rulings are final."
+    },
+    {
+      "title": "IP Leak Prevention",
+      "icon": "🌐",
+      "summary": "Always audit client setups (WebRTC & DNS) to ensure your real IP address remains concealed and protected from accidental leakage."
+    },
+    {
+      "title": "IP Pool Conservation",
+      "icon": "🔄",
+      "summary": "Avoid saturating residential or datacenter IP pools through automated requests or concurrent heavy stream flooding."
+    },
+    {
+      "title": "Ethical Content Guidelines",
+      "icon": "🚫",
+      "summary": "Proxy tunnels may not be utilized to access, distribute, or stream illicit, pirated, or copyright-infringing content."
+    }
+  ],
+  "boosterPerks": {
+    "promoTitle": "1 For 2 Booster & VIP Sale!",
+    "promoBadge": "Limited Time Special",
+    "promoDescription": "Boost the server once and receive both the Discord Booster and Premium VIP packages for free!",
+    "perks": [
+      {
+        "title": "Enhanced Voice Clarity",
+        "icon": "🗣️",
+        "desc": "Sound noticeably louder and crisper in Discord voice channels."
+      },
+      {
+        "title": "Bypass All Slowmodes",
+        "icon": "✅",
+        "desc": "Zero chat cooldowns across all community discussion channels."
+      },
+      {
+        "title": "Priority Staff Support",
+        "icon": "⚒️",
+        "desc": "Expedited support handling from administrators and moderators."
+      },
+      {
+        "title": "Lightning Ticket Queue",
+        "icon": "🎟️",
+        "desc": "Priority ticket queue for unblock requests and troubleshooting."
+      },
+      {
+        "title": "VIP Lounge Access",
+        "icon": "💸",
+        "desc": "Exclusive access to private Premium chat and voice lounges."
+      },
+      {
+        "title": "Direct Feature Input",
+        "icon": "💡",
+        "desc": "Submit suggestions to the dedicated VIP suggestions channel."
+      },
+      {
+        "title": "Exclusive Stealth Mirrors",
+        "icon": "🔗",
+        "desc": "Unlock private, unlisted proxy links and high-speed VIP mirrors."
+      }
+    ]
+  },
+  "announcements": [
+    {
+      "id": "ann-logo",
+      "author": "- luke - [CASH]",
+      "date": "Recent Update",
+      "title": "New Brand Identity & Logo Deployed :3",
+      "badge": "Brand Update",
+      "content": "We officially refreshed our identity! The official logo is now live across tpp.baby and server banners. Check out the crisp new crest!"
+    },
+    {
+      "id": "ann-links",
+      "author": "- luke - [CASH]",
+      "date": "Recent Drop",
+      "title": "Massive Link Drop: Truffled, Figure, NTH, and Froggies Arcade",
+      "badge": "Mirror Release",
+      "content": "Fresh working mirrors published for Truffled, Figure Cloud Workers, Noah's Tutoring Hub with 9 academic disguise subdomains, and Froggies Arcade with IXL Learning cloaks!"
+    },
+    {
+      "id": "ann-promo",
+      "author": "Ghosty 👑 [11Z]",
+      "date": "Special Promo",
+      "title": "1-for-2 Booster Sale Live Now!",
+      "badge": "VIP Special",
+      "content": "For this week and next: boost the server with just 1 boost and receive both @Discord Booster and @Premium packages! Get louder voice audio, slowmode bypass, and private VIP links!"
+    },
+    {
+      "id": "ann-verify",
+      "author": "Ghosty 👑 [11Z]",
+      "date": "Security Note",
+      "title": "Automated Verification Flow Update",
+      "badge": "System Notice",
+      "content": "Verification flow updated. Ensure you verify upon joining to retain your role. Thank you to everyone keeping the community safe and bot-free."
+    }
+  ]
+}
