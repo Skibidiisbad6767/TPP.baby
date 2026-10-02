@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Immediate Cloak Restoration to Prevent Title/Favicon Flash on Reload -->
   <script>
     (function() {
@@ -11,9 +11,7 @@
         var savedCloak = localStorage.getItem('tpp_cloak');
         if (savedCloak) {
           var cloak = JSON.parse(savedCloak);
-          if (cloak && cloak.title) {
-            document.title = cloak.title;
-          }
+          if (cloak && cloak.title) document.title = cloak.title;
           if (cloak && cloak.icon) {
             var applyIcon = function() {
               var links = document.querySelectorAll("link[rel*='icon'], link[rel='apple-touch-icon']");
@@ -37,511 +35,201 @@
     })();
   </script>
 
-  <title>The Proxy Project | Fast Unblocked Mirrors & Academic Cloaks</title>
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="The Proxy Project | Fast Unblocked Mirrors & Academic Cloaks">
-  <meta name="description" content="Official directory for The Proxy Project (tpp.baby). Curated high-performance web proxies, Cloudflare edge workers, IXL disguised mirrors, and academic subdomains.">
-  <meta name="keywords" content="proxy, unblocker, web proxy, truffled, figure, noahs tutoring hub, froggies arcade, school bypass, goguardian, iboss, lightspeed">
-  <meta name="author" content="The Proxy Project">
-  <meta name="theme-color" content="#6366f1">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tpp.baby/">
-  <meta property="og:title" content="The Proxy Project | Fast Unblocked Mirrors & Academic Cloaks">
-  <meta property="og:description" content="Next-generation stealth proxy network and mirror directory with academic cloaking and filter bypass.">
-  <meta property="og:image" content="IMG_6171.webp">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://tpp.baby/">
-  <meta property="twitter:title" content="The Proxy Project">
-  <meta property="twitter:description" content="Next-generation stealth proxy network and mirror directory.">
-  <meta property="twitter:image" content="IMG_6171.webp">
+  <title>The Proxy Project | tpp.baby</title>
+  <meta name="description" content="Community unblocker directory, web proxies, and educational camouflage mirrors.">
+  <meta name="theme-color" content="#0b0e14">
 
   <!-- Favicons & App Manifest -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
 
-  <!-- Google Fonts Preconnect & Stylesheet -->
+  <!-- Fonts & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ========================================================================
-       Site Header
-       ======================================================================== -->
-  <header class="site-header" id="site-header">
+  <!-- Navigation Header -->
+  <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html" class="brand-wrapper" id="brand-link" aria-label="The Proxy Project Home">
-        <div class="brand-logo-frame">
-          <img src="IMG_6171.webp" alt="The Proxy Project Official Logo" class="brand-logo-img" id="header-brand-logo">
-        </div>
-        <div class="brand-meta">
-          <span class="brand-title">The Proxy Project</span>
-          <span class="brand-sub">
-            <span class="pulse-dot"></span>
-            <span>tpp.baby • v2.4</span>
-          </span>
-        </div>
+      <a href="index.html" class="brand-wrapper">
+        <img src="IMG_6171.webp" alt="TPP Logo" class="brand-logo">
+        <span>The Proxy Project</span>
+        <span class="brand-badge">tpp.baby</span>
       </a>
 
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#proxies" class="nav-link">Proxies</a></li>
-          <li><a href="#cloaker" class="nav-link">Tab Cloaker</a></li>
-          <li><a href="#matrix" class="nav-link">Filter Matrix</a></li>
-          <li><a href="#boosters" class="nav-link">Booster VIP</a></li>
-          <li><a href="#rules" class="nav-link">Rules & Ethics</a></li>
-          <li><a href="#announcements" class="nav-link">Updates</a></li>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="proxies.html" class="nav-link">Proxies</a></li>
+          <li><a href="cloaker.html" class="nav-link">Tab Cloaker</a></li>
+          <li><a href="premium.html" class="nav-link">Booster Perks</a></li>
+          <li><a href="rules.html" class="nav-link">Rules</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <button class="btn-panic btn-panic-action" id="btn-header-panic" title="Instantly disguise tab to Google Classroom (Press Esc or ~)">
-          <span>🚨 Panic</span>
+        <button class="btn-panic btn-panic-action" title="Quick disguise (Esc or ~)">
+          <span>Panic</span>
           <kbd>Esc</kbd>
         </button>
-
-        <a href="https://discord.gg/tpp" target="_blank" rel="noopener noreferrer" class="btn-discord" id="btn-discord-join">
-          <span>💎 Join Discord</span>
+        <a href="https://discord.gg/tpp" target="_blank" rel="noopener noreferrer" class="btn-discord">
+          <span>Discord</span>
         </a>
-
-        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- ========================================================================
-       Main Content Container
-       ======================================================================== -->
-  <main id="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero-section">
-      <div class="container">
-        <div class="hero-pill">
-          <span class="hero-pill-badge">Official Hub</span>
-          <span>tpp.baby • Community Node Network Live</span>
-        </div>
+  <!-- Page Content -->
+  <main class="container">
+    <span id="home-page-indicator" style="display:none;"></span>
 
-        <h1 class="hero-title">
-          <span class="hero-gradient-text">Bypass Restrictions.</span><br>
-          <span class="hero-gradient-accent">Browse Undetected.</span>
-        </h1>
+    <!-- Hero -->
+    <section class="page-hero">
+      <span class="hero-tag">Community Proxy Hub</span>
+      <h1 class="page-title">Browse freely. Stay undetected.</h1>
+      <p class="page-subtitle">
+        Curated high-speed web proxies, Cloudflare edge workers, and academic camouflage mirrors maintained by The Proxy Project community.
+      </p>
 
-        <p class="hero-description">
-          Curated high-speed proxy mirrors, Cloudflare serverless edge workers, academic disguise subdomains, and unblocked arcade portals. Built for ethical research, privacy defense, and open web access.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#proxies" class="btn-primary" id="btn-hero-explore">
-            <span>Explore Active Proxies</span>
-            <span>⚡</span>
-          </a>
-          <a href="#cloaker" class="btn-secondary" id="btn-hero-cloaker">
-            <span>Launch Stealth Cloaker</span>
-            <span>🕶️</span>
-          </a>
-          <a href="#matrix" class="btn-secondary" id="btn-hero-matrix">
-            <span>Firewall Matrix</span>
-            <span>🛡️</span>
-          </a>
-        </div>
-
-        <!-- Live Network Counter Row -->
-        <div class="hero-stats-grid" id="hero-stats">
-          <div class="stat-card">
-            <div class="stat-value">4</div>
-            <div class="stat-label">Core Proxy Engines</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">24+</div>
-            <div class="stat-label">Verified Active Mirrors</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">5</div>
-            <div class="stat-label">Firewalls Bypassed</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">99.8%</div>
-            <div class="stat-label">Node Reliability</div>
-          </div>
-        </div>
+      <div style="display:flex; gap:0.75rem; margin-top:1.5rem; flex-wrap:wrap;">
+        <a href="proxies.html" class="btn btn-primary">
+          <span>Explore Proxy Directory</span>
+          <span>→</span>
+        </a>
+        <a href="cloaker.html" class="btn btn-secondary">
+          <span>Tab Cloak Studio</span>
+        </a>
       </div>
     </section>
 
-    <!-- Stealth Tab Cloaker & Panic Station -->
-    <section class="cloaker-bar-section" id="cloaker">
-      <div class="container">
-        <div class="cloaker-panel">
-          <div class="cloaker-header">
-            <div class="cloaker-title-group">
-              <div class="cloaker-icon-badge">🕶️</div>
-              <div>
-                <h2 class="cloaker-title">Stealth Tab Cloaker & Untraceable Launcher</h2>
-                <p class="cloaker-subtitle">Mask your browser tab as legitimate coursework or launch links inside an untraceable <code>about:blank</code> sandbox container.</p>
-              </div>
-            </div>
-            <div class="cloaker-actions">
-              <button class="btn-secondary" onclick="resetTabCloak()" style="padding:0.45rem 0.85rem; font-size:0.82rem;">
-                <span>↺ Reset Tab</span>
-              </button>
-              <button class="btn-panic btn-panic-action" style="padding:0.45rem 0.85rem;">
-                <span>🚨 Instant Panic [Esc]</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Cloak Presets Switcher -->
-          <div>
-            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.6rem;">
-              <span style="font-size:0.75rem; font-weight:700; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.05em;">Quick Disguise Presets:</span>
-              <span style="font-size:0.75rem; color:var(--text-muted);">(Click to disguise this tab immediately)</span>
-            </div>
-            <div class="preset-selector-row">
-              <button class="preset-chip-btn" data-id="classroom" title="Disguise as Google Classroom">
-                <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Classroom">
-                <span>Google Classroom</span>
-              </button>
-              <button class="preset-chip-btn" data-id="drive" title="Disguise as Google Drive">
-                <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Drive">
-                <span>Google Drive</span>
-              </button>
-              <button class="preset-chip-btn" data-id="docs" title="Disguise as Google Docs">
-                <img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico" alt="Docs">
-                <span>Google Docs</span>
-              </button>
-              <button class="preset-chip-btn" data-id="ixl" title="Disguise as IXL Learning">
-                <img src="https://www.ixl.com/favicon.ico" alt="IXL">
-                <span>IXL Learning</span>
-              </button>
-              <button class="preset-chip-btn" data-id="canvas" title="Disguise as Canvas LMS">
-                <img src="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" alt="Canvas">
-                <span>Canvas LMS</span>
-              </button>
-              <button class="preset-chip-btn" data-id="desmos" title="Disguise as Desmos Graphing">
-                <img src="https://www.desmos.com/favicon.ico" alt="Desmos">
-                <span>Desmos Graphing</span>
-              </button>
-              <button class="preset-chip-btn" data-id="wikipedia" title="Disguise as Wikipedia">
-                <img src="https://en.wikipedia.org/static/favicon/wikipedia.ico" alt="Wikipedia">
-                <span>Wikipedia</span>
-              </button>
-              <button class="preset-chip-btn" id="btn-custom-cloak-modal" title="Set Custom Tab Title and Favicon">
-                <span>⚙️ Custom Cloak</span>
-              </button>
-            </div>
-            <div id="active-cloak-status" style="font-size:0.8rem; color:var(--brand-secondary); margin-top:0.6rem; display:none;"></div>
-          </div>
-
-          <!-- Stealth Launcher Input -->
-          <div class="cloaker-controls">
-            <div class="stealth-launcher-row">
-              <div class="cloaker-input-group">
-                <span class="cloaker-input-icon">🔗</span>
-                <input type="text" id="input-custom-stealth-url" class="input-stealth-url" placeholder="Paste any proxy URL or web link to launch cloaked in about:blank...">
-              </div>
-              <button class="btn-primary" id="btn-custom-stealth-launch" style="padding:0.75rem 1.4rem;">
-                <span>Launch in about:blank</span>
-                <span>↗</span>
-              </button>
-            </div>
-          </div>
+    <!-- Quick Tab Cloaker Bar -->
+    <section class="cloaker-bar-widget">
+      <div class="cloaker-bar-top">
+        <span class="cloaker-bar-title">
+          <span>🕶️ Quick Tab Disguise</span>
+        </span>
+        <div style="display:flex; gap:0.5rem;">
+          <a href="cloaker.html" class="btn btn-secondary btn-sm">Full Cloak Studio →</a>
+          <button class="btn btn-secondary btn-sm" onclick="resetTabCloak()">Reset</button>
         </div>
+      </div>
+
+      <div class="preset-chip-row">
+        <button class="preset-chip" data-id="classroom">
+          <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Classroom">
+          <span>Google Classroom</span>
+        </button>
+        <button class="preset-chip" data-id="drive">
+          <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Drive">
+          <span>Google Drive</span>
+        </button>
+        <button class="preset-chip" data-id="docs">
+          <img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico" alt="Docs">
+          <span>Google Docs</span>
+        </button>
+        <button class="preset-chip" data-id="ixl">
+          <img src="https://www.ixl.com/favicon.ico" alt="IXL">
+          <span>IXL Learning</span>
+        </button>
+        <button class="preset-chip" data-id="canvas">
+          <img src="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" alt="Canvas">
+          <span>Canvas LMS</span>
+        </button>
+        <button class="preset-chip" data-id="desmos">
+          <img src="https://www.desmos.com/favicon.ico" alt="Desmos">
+          <span>Desmos</span>
+        </button>
+        <button class="preset-chip" data-id="wikipedia">
+          <img src="https://en.wikipedia.org/static/favicon/wikipedia.ico" alt="Wikipedia">
+          <span>Wikipedia</span>
+        </button>
+        <button class="preset-chip" id="btn-custom-cloak-modal">
+          <span>⚙️ Custom</span>
+        </button>
+      </div>
+
+      <div id="active-cloak-status" class="cloak-status-note" style="display:none;"></div>
+    </section>
+
+    <!-- Featured Proxies Preview -->
+    <section style="margin: 3rem 0;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="font-size:1.4rem; font-weight:700; color:#fff;">Active Deployments</h2>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Direct unblockers tested against school firewalls.</p>
+        </div>
+        <a href="proxies.html" class="btn btn-secondary btn-sm">
+          <span>View all 24 mirrors in Directory →</span>
+        </a>
+      </div>
+
+      <div class="proxies-grid" id="proxies-grid">
+        <!-- Rendered by js/app.js -->
       </div>
     </section>
 
-    <!-- Proxies & Mirrors Directory Section -->
-    <section class="proxies-section" id="proxies" style="padding: 2.5rem 0 3rem;">
-      <div class="container">
-        
-        <div class="section-header-block">
-          <span class="section-tag">Active Deployments</span>
-          <h2 class="section-heading">Verified Proxy Engines & Mirror Directory</h2>
-          <p class="section-subtext">Filter, inspect, and launch tested stealth nodes. Each proxy engine is independently hosted with fallback routing.</p>
+    <!-- Community Notice Box -->
+    <section style="background:var(--bg-card); border:1px solid var(--border-default); border-radius:var(--radius-md); padding:1.5rem 1.75rem; margin-bottom:3.5rem;">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.25rem;">
+        <div>
+          <h3 style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">Discord Booster Special: 1-for-2 Sale</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary); max-width:620px;">
+            Boost the server with 1 boost to receive both @Discord Booster and @Premium roles for free. Unlocks exclusive unlisted stealth links, louder voice channels, and slowmode bypass.
+          </p>
         </div>
-
-        <!-- Directory Search & Filter Controls -->
-        <div class="directory-toolbar" id="directory-toolbar">
-          <div class="toolbar-top-row">
-            <div class="search-box-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-              <input type="text" id="search-mirrors-input" class="input-search-mirrors" placeholder="Search mirrors by domain, service name, or tag (Press Ctrl+K or /)...">
-            </div>
-
-            <div class="category-chips">
-              <span class="chip-label">Category:</span>
-              <button class="filter-chip active" data-category="all">All</button>
-              <button class="filter-chip" data-category="web-proxy">Web Proxy</button>
-              <button class="filter-chip" data-category="cloud-edge">Cloud Edge</button>
-              <button class="filter-chip" data-category="educational-camouflage">Educational</button>
-              <button class="filter-chip" data-category="arcade-&-media">Arcade & Media</button>
-            </div>
-          </div>
-
-          <div class="filter-tags-row">
-            <div class="firewall-chips">
-              <span class="chip-label">Filter Bypass:</span>
-              <button class="filter-chip active" data-firewall="all">All Firewalls</button>
-              <button class="filter-chip" data-firewall="goguardian">GoGuardian</button>
-              <button class="filter-chip" data-firewall="iboss">iBoss</button>
-              <button class="filter-chip" data-firewall="lightspeed">Lightspeed</button>
-              <button class="filter-chip" data-firewall="fortiguard">FortiGuard</button>
-            </div>
-
-            <div>
-              <button class="btn-secondary" onclick="resetFilters()" style="padding:0.4rem 0.85rem; font-size:0.78rem;">
-                <span>Reset Filters</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dynamic Proxy Cards Grid -->
-        <div class="proxy-services-grid" id="services-grid">
-          <!-- Dynamically populated from data/data.json -->
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Filter Compatibility Matrix Section -->
-    <section class="matrix-section" id="matrix">
-      <div class="container">
-        <div class="section-header-block">
-          <span class="section-tag">Firewall Intelligence</span>
-          <h2 class="section-heading">Filter Compatibility Matrix</h2>
-          <p class="section-subtext">Real-time status tracking tested across major content filtering systems used in schools and enterprises.</p>
-        </div>
-
-        <div class="matrix-card">
-          <table class="matrix-table" id="matrix-table">
-            <thead>
-              <tr>
-                <th>Service Name</th>
-                <th>GoGuardian</th>
-                <th>iBoss</th>
-                <th>Lightspeed</th>
-                <th>FortiGuard</th>
-                <th>Securly</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="matrix-tbody">
-              <!-- Dynamically populated from data/data.json -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Booster Perks & VIP Tier (Ghosty's 1-for-2 Sale) -->
-    <section class="booster-section" id="boosters">
-      <div class="container">
-        
-        <div class="booster-banner-card">
-          <div class="booster-banner-top">
-            <div>
-              <div class="booster-sale-tag">🔥 1 FOR 2 SERVER SALE!</div>
-              <h2 class="booster-banner-title">Boost Once. Receive Booster + Premium VIP.</h2>
-              <p class="booster-banner-desc">For this week and next: boost the Discord server with just 1 boost to automatically unlock both the Discord Booster and Premium VIP packages for free!</p>
-            </div>
-            <div>
-              <a href="https://discord.gg/tpp" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1.05rem; padding:0.9rem 1.8rem;">
-                <span>💎 Boost Server on Discord</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="perks-grid" id="booster-perks-grid">
-            <!-- Dynamically populated from data/data.json -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Ethical Usage Guidelines & Community Rules (Luke's Rules) -->
-    <section class="rules-section" id="rules">
-      <div class="container">
-        <div class="section-header-block">
-          <span class="section-tag">Terms & Guidelines</span>
-          <h2 class="section-heading">Ethical Proxy Guidelines & Terms of Service</h2>
-          <p class="section-subtext">The Proxy Project strictly enforces ethical usage standards. Review the rules established by server leadership.</p>
-        </div>
-
-        <div class="rules-grid" id="rules-grid">
-          <!-- Dynamically populated from data/data.json -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Community Announcements Feed -->
-    <section class="announcements-section" id="announcements">
-      <div class="container">
-        <div class="section-header-block">
-          <span class="section-tag">Community Dispatch</span>
-          <h2 class="section-heading">Announcements & Feed</h2>
-          <p class="section-subtext">Official updates directly from - luke - [CASH] and Ghosty 👑 [11Z].</p>
-        </div>
-
-        <div class="announcements-grid" id="announcements-grid">
-          <!-- Dynamically populated from data/data.json -->
-        </div>
+        <a href="premium.html" class="btn btn-primary btn-sm">
+          <span>View Booster Perks</span>
+        </a>
       </div>
     </section>
 
   </main>
 
-  <!-- ========================================================================
-       Site Footer
-       ======================================================================== -->
-  <footer class="site-footer" id="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <div class="brand-wrapper" style="margin-bottom:0.75rem;">
-            <div class="brand-logo-frame" style="width:36px; height:36px;">
-              <img src="IMG_6171.webp" alt="The Proxy Project" class="brand-logo-img">
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title" style="font-size:1.05rem;">The Proxy Project</span>
-              <span class="brand-sub">tpp.baby</span>
-            </div>
-          </div>
-          <p class="footer-brand-desc">
-            Empowering students, researchers, and privacy advocates with high-speed proxy infrastructure, educational tab masks, and censorship bypass tools.
-          </p>
-          <div style="display:flex; gap:0.6rem;">
-            <a href="https://discord.gg/tpp" target="_blank" rel="noopener noreferrer" class="btn-discord" style="padding:0.4rem 0.8rem; font-size:0.8rem;">
-              <span>Discord Community</span>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h3 class="footer-col-title">Navigation</h3>
-          <ul class="footer-links-list">
-            <li><a href="#proxies" class="footer-link">Proxy Directory</a></li>
-            <li><a href="#cloaker" class="footer-link">Stealth Tab Cloaker</a></li>
-            <li><a href="#matrix" class="footer-link">Filter Matrix</a></li>
-            <li><a href="#boosters" class="footer-link">Booster VIP Sale</a></li>
-            <li><a href="#rules" class="footer-link">Code of Conduct</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-col-title">Proxy Engines</h3>
-          <ul class="footer-links-list">
-            <li><a href="https://truffled.cv/" target="_blank" rel="noopener" class="footer-link">Truffled</a></li>
-            <li><a href="https://figure-cloud.figure-softwares.workers.dev/" target="_blank" rel="noopener" class="footer-link">Figure Cloud Workers</a></li>
-            <li><a href="https://education.kchcs.org/" target="_blank" rel="noopener" class="footer-link">Noah's Tutoring Hub</a></li>
-            <li><a href="https://nick.allys.love/" target="_blank" rel="noopener" class="footer-link">Froggies Arcade</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="footer-col-title">Legal & Security</h3>
-          <ul class="footer-links-list">
-            <li><a href="#rules" class="footer-link">Ethical Usage Terms</a></li>
-            <li><a href="#rules" class="footer-link">Privacy Policy</a></li>
-            <li><a href="#rules" class="footer-link">IP Leak Warnings</a></li>
-            <li><a href="#rules" class="footer-link">Report Abusive Nodes</a></li>
-          </ul>
-        </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span style="font-weight:600; color:#fff;">The Proxy Project</span> &bull; <code>tpp.baby</code> &bull; Educational & network testing directory.
       </div>
-
-      <div class="footer-bottom">
-        <div>
-          &copy; 2026 The Proxy Project (<code>tpp.baby</code>). All rights reserved. For educational and network testing purposes.
-        </div>
-        <div style="display:flex; gap:1.25rem;">
-          <a href="#hero-section" class="footer-link">Back to Top ↑</a>
-          <button class="footer-link btn-panic-action" style="background:none; border:none; cursor:pointer;">Emergency Cloak</button>
-        </div>
-      </div>
+      <ul class="footer-nav">
+        <li><a href="proxies.html">Proxies</a></li>
+        <li><a href="cloaker.html">Tab Cloaker</a></li>
+        <li><a href="premium.html">Booster Perks</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="https://discord.gg/tpp" target="_blank" rel="noopener">Discord</a></li>
+      </ul>
     </div>
   </footer>
 
-  <!-- ========================================================================
-       QR Code Modal
-       ======================================================================== -->
-  <div class="modal-overlay" id="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title" id="qr-modal-title">Scan on Mobile</h3>
-        <button class="modal-close-btn" onclick="closeQRModal()" aria-label="Close modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div class="qr-container">
-          <div class="qr-box" id="qr-display-box">
-            <!-- Dynamic QR Code SVG rendered here -->
-          </div>
-          <p style="font-size:0.85rem; color:var(--text-muted);">Scan this QR code with your mobile camera to quickly open this mirror without typing the domain.</p>
-          <div class="qr-url-text" id="qr-url-text"></div>
-          <button class="btn-primary" style="width:100%; justify-content:center;" onclick="copyToClipboard(document.getElementById('qr-url-text').textContent, 'URL')">
-            <span>Copy Link</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Custom Cloak Modal -->
-  <div class="modal-overlay" id="custom-cloak-modal" role="dialog" aria-modal="true" aria-labelledby="custom-cloak-title">
+  <div class="modal-overlay" id="custom-cloak-modal" role="dialog" aria-modal="true">
     <div class="modal-card">
       <div class="modal-header">
-        <h3 class="modal-title" id="custom-cloak-title">Custom Tab Cloak</h3>
-        <button class="modal-close-btn" onclick="closeCustomCloakModal()" aria-label="Close modal">&times;</button>
+        <h3 class="modal-title">Custom Tab Disguise</h3>
+        <button class="modal-close" onclick="closeCustomCloakModal()">&times;</button>
       </div>
-      <div class="modal-body">
-        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">
-          Configure a custom tab title and favicon URL. This disguise will automatically persist across browser reloads.
-        </p>
-        <div style="display:flex; flex-direction:column; gap:0.85rem; margin-bottom:1.25rem;">
-          <div>
-            <label style="font-size:0.78rem; font-weight:700; color:var(--text-dim); text-transform:uppercase; display:block; margin-bottom:0.35rem;">Tab Title</label>
-            <input type="text" id="input-custom-cloak-title" class="input-stealth-url" style="padding-left:1rem;" placeholder="e.g. My School Portal / Dashboard">
-          </div>
-          <div>
-            <label style="font-size:0.78rem; font-weight:700; color:var(--text-dim); text-transform:uppercase; display:block; margin-bottom:0.35rem;">Favicon URL (optional)</label>
-            <input type="text" id="input-custom-cloak-icon" class="input-stealth-url" style="padding-left:1rem;" placeholder="e.g. https://www.google.com/favicon.ico">
-          </div>
-        </div>
-        <div style="display:flex; gap:0.6rem;">
-          <button class="btn-primary" style="flex:1; justify-content:center;" onclick="saveCustomCloak()">
-            <span>Save & Apply Disguise</span>
-          </button>
-          <button class="btn-secondary" onclick="closeCustomCloakModal()">Cancel</button>
-        </div>
+      <div class="form-group">
+        <label class="form-label">Tab Title</label>
+        <input type="text" id="input-custom-title" class="form-input" placeholder="e.g. Student Portal">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Favicon URL (optional)</label>
+        <input type="text" id="input-custom-icon" class="form-input" placeholder="e.g. https://www.google.com/favicon.ico">
+      </div>
+      <div style="display:flex; gap:0.5rem; margin-top:1.25rem;">
+        <button class="btn btn-primary btn-sm" style="flex:1;" onclick="saveCustomCloakForm()">Save & Disguise</button>
+        <button class="btn btn-secondary btn-sm" onclick="closeCustomCloakModal()">Cancel</button>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification Container -->
-  <div class="toast-container" id="toast-container" aria-live="polite"></div>
-
-  <!-- Main JavaScript Logic -->
+  <div class="toast-container" id="toast-container"></div>
   <script src="js/app.js"></script>
 </body>
 </html>

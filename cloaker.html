@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Immediate Cloak Restoration to Prevent Title/Favicon Flash on Reload -->
+  <script>
+    (function() {
+      try {
+        var savedCloak = localStorage.getItem('tpp_cloak');
+        if (savedCloak) {
+          var cloak = JSON.parse(savedCloak);
+          if (cloak && cloak.title) document.title = cloak.title;
+          if (cloak && cloak.icon) {
+            var applyIcon = function() {
+              var links = document.querySelectorAll("link[rel*='icon'], link[rel='apple-touch-icon']");
+              if (links.length > 0) {
+                links.forEach(function(l) { l.href = cloak.icon; });
+              } else {
+                var l = document.createElement('link');
+                l.rel = 'icon';
+                l.href = cloak.icon;
+                document.head.appendChild(l);
+              }
+            };
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', applyIcon);
+            } else {
+              applyIcon();
+            }
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <title>Tab Cloaker & Sandbox | The Proxy Project</title>
+  <meta name="description" content="Persistent tab cloaking and about:blank sandbox launcher.">
+  <meta name="theme-color" content="#0b0e14">
+
+  <!-- Favicons & App Manifest -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-wrapper">
+        <img src="IMG_6171.webp" alt="TPP Logo" class="brand-logo">
+        <span>The Proxy Project</span>
+        <span class="brand-badge">tpp.baby</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="proxies.html" class="nav-link">Proxies</a></li>
+          <li><a href="cloaker.html" class="nav-link active">Tab Cloaker</a></li>
+          <li><a href="premium.html" class="nav-link">Booster Perks</a></li>
+          <li><a href="rules.html" class="nav-link">Rules</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-panic btn-panic-action" title="Quick disguise (Esc or ~)">
+          <span>Panic</span>
+          <kbd>Esc</kbd>
+        </button>
+        <a href="https://discord.gg/tpp" target="_blank" rel="noopener noreferrer" class="btn-discord">
+          <span>Discord</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <section class="page-hero compact">
+      <span class="hero-tag">Stealth Tools</span>
+      <h1 class="page-title">Tab Cloaker & Sandbox</h1>
+      <p class="page-subtitle">
+        Mask active tabs as legitimate coursework and launch proxy links inside untraceable <code>about:blank</code> sandboxes. All disguise settings persist across reloads.
+      </p>
+    </section>
+
+    <div class="content-section">
+      <div class="cloaker-studio-grid">
+        
+        <!-- Panel 1: Tab Masking Presets -->
+        <div class="studio-panel">
+          <h2 class="panel-heading">1. Tab Disguise Presets</h2>
+          <p class="panel-subtext">Select a preset to disguise this tab's title and favicon immediately. The disguise will persist even when you refresh the page.</p>
+
+          <div class="preset-chip-row" style="margin-bottom:1.25rem;">
+            <button class="preset-chip" data-id="classroom">
+              <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Classroom">
+              <span>Google Classroom</span>
+            </button>
+            <button class="preset-chip" data-id="drive">
+              <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Drive">
+              <span>Google Drive</span>
+            </button>
+            <button class="preset-chip" data-id="docs">
+              <img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico" alt="Docs">
+              <span>Google Docs</span>
+            </button>
+            <button class="preset-chip" data-id="ixl">
+              <img src="https://www.ixl.com/favicon.ico" alt="IXL">
+              <span>IXL Learning</span>
+            </button>
+            <button class="preset-chip" data-id="canvas">
+              <img src="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico" alt="Canvas">
+              <span>Canvas LMS</span>
+            </button>
+            <button class="preset-chip" data-id="desmos">
+              <img src="https://www.desmos.com/favicon.ico" alt="Desmos">
+              <span>Desmos Graphing</span>
+            </button>
+            <button class="preset-chip" data-id="wikipedia">
+              <img src="https://en.wikipedia.org/static/favicon/wikipedia.ico" alt="Wikipedia">
+              <span>Wikipedia</span>
+            </button>
+          </div>
+
+          <div id="active-cloak-status" class="cloak-status-note" style="margin-bottom:1.5rem; display:none;"></div>
+
+          <hr style="border:0; border-top:1px solid var(--border-subtle); margin:1.25rem 0;">
+
+          <!-- Custom Disguise Form -->
+          <h3 style="font-size:0.95rem; font-weight:700; color:#fff; margin-bottom:0.75rem;">Custom Disguise</h3>
+          <div class="form-group">
+            <label class="form-label">Custom Page Title</label>
+            <input type="text" id="input-custom-title" class="form-input" placeholder="e.g. My District Student Portal">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Custom Favicon URL (optional)</label>
+            <input type="text" id="input-custom-icon" class="form-input" placeholder="e.g. https://example.com/favicon.ico">
+          </div>
+
+          <div style="display:flex; gap:0.5rem; margin-top:1rem;">
+            <button class="btn btn-primary btn-sm" onclick="saveCustomCloakForm()">Save Custom Cloak</button>
+            <button class="btn btn-secondary btn-sm" onclick="resetTabCloak()">Reset to Default</button>
+          </div>
+        </div>
+
+        <!-- Panel 2: About:Blank Sandbox Launcher -->
+        <div class="studio-panel">
+          <h2 class="panel-heading">2. Untraceable Sandbox Launcher</h2>
+          <p class="panel-subtext">
+            Launch any URL in an <code>about:blank</code> tab. This leaves zero entry in your browser history and disguises the popup window with your active tab mask.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label">Destination URL</label>
+            <input type="text" id="input-sandbox-url" class="form-input" placeholder="https://example.com or any proxy URL">
+          </div>
+
+          <button class="btn btn-primary" id="btn-launch-sandbox" style="width:100%; margin-top:0.5rem;">
+            <span>Launch in about:blank</span>
+            <span>↗</span>
+          </button>
+
+          <div style="margin-top:2rem; padding:1rem; background:var(--bg-subtle); border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+            <h4 style="font-size:0.85rem; font-weight:700; color:#fff; margin-bottom:0.25rem;">Emergency Panic Key</h4>
+            <p style="font-size:0.82rem; color:var(--text-secondary); line-height:1.5;">
+              Press <kbd style="font-family:var(--font-mono); background:#000; padding:0.1rem 0.35rem; border-radius:3px; border:1px solid var(--border-default);">Esc</kbd> or <kbd style="font-family:var(--font-mono); background:#000; padding:0.1rem 0.35rem; border-radius:3px; border:1px solid var(--border-default);">~</kbd> at any time to immediately replace your current tab with Google Classroom.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span style="font-weight:600; color:#fff;">The Proxy Project</span> &bull; <code>tpp.baby</code>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="proxies.html">Proxies</a></li>
+        <li><a href="cloaker.html">Tab Cloaker</a></li>
+        <li><a href="premium.html">Booster Perks</a></li>
+        <li><a href="rules.html">Rules</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
